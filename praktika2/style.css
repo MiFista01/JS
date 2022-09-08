@@ -1,0 +1,7 @@
+#img{
+    width: 10vw;
+    height: 10vw;
+    background-image: url(01.jpg);
+    background-size: cover;
+    transition-duration: 0.5s;
+}

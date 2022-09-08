@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='scripts.js'></script>
+</head>
+<body>
+    <h1>Расчёт площади</h1>
+    <form name="calculator" onsubmit="return false">
+        <label for="">Ширина: </label>
+            <input type="number" name="weight" id="" placeholder="Ширина" min="1">
+        <label for="">Высота: </label>
+            <input type="number" name="height" id="" placeholder="Высота" min="1">
+     <button id="calculate" onclick=calculate() >Найти площадь</button>
+        <p>Площадь: <span id="result">0</span></p>
+    </form>
+       
+</body>
+</html>

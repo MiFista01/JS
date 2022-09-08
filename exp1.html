@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Вывод данных JS</h1>
+    <p>Количество нажатий - <span id = "numb">0</span></p>
+    <button id="plus">Нажать</button>
+    <script>
+        var favourite_numb = prompt("Ваше любимое число",0)
+        document.getElementById("plus").addEventListener("click",plus)
+        if (!isNaN(parseInt(favourite_numb))){
+            document.getElementById("numb").textContent = parseInt(favourite_numb)
+        }
+        function plus(){
+            document.getElementById("numb").textContent = parseInt(document.getElementById("numb").textContent)+1
+        }
+    </script>
+</body>
+</html>

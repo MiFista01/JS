@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #1b1b1b;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    width: 100%;
+    color: whitesmoke;
+    box-sizing: border-box;
+    padding-left: 10vw;
+}
+h2{
+    width: 100%;
+    color: whitesmoke;
+    box-sizing: border-box;
+    padding-left: 10vw;
+}
+#plus_arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#plus_arrow img{
+    width: 4vw;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+}
+#left{
+    transition-duration: 1s;
+    margin-right: -10px;
+}
+#left:hover{
+    transform: translateX(-30%);
+}
+#right{
+    transition-duration: 1s;
+    margin-left: -10px;
+}
+#right:hover{
+    transform: translateX(30%);
+}
+#all{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70vw;
+    height: 30vw;
+    background-color: #242424;
+    border: 10px solid black;
+    border-radius: 1vw;
+}
+#content{
+    width: 35%;
+    box-sizing: border-box;
+    padding: 1vw;
+    color: whitesmoke;
+    font-size: 1vw;
+    
+}
+#img{
+    width: 65%;
+    height:  100%;
+    background-image: url(../imgs/pedro.jpg);
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+footer{
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+}
