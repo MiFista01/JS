@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+}
+h1{
+    width: 100%;
+}
+#homepage{
+    width: 35vw;
+    height: 25vw;
+    background-size: cover;
+    background-position: center;
+    margin-left: 10vw;
+}
+#animals{
+    
+    list-style: none;
+}
+#animals li{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+#animals li p {
+    width: auto;
+    cursor: pointer;
+    padding: 0;
+    margin: 0.5vw;
+    font-size: 0.8vw;
+}
