@@ -6,30 +6,111 @@ body{
     align-content: center;
     flex-wrap: wrap;
 }
-h1{
+
+#home{
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+h2{
     width: 100%;
 }
-#homepage{
-    width: 35vw;
-    height: 25vw;
-    background-size: cover;
-    background-position: center;
-    margin-left: 10vw;
-}
-#animals{
-    
+#categories{
     list-style: none;
 }
-#animals li{
+#categories li{
     width: auto;
     display: flex;
     flex-direction: row;
     justify-content: left;
 }
-#animals li p {
+#categories li p {
     width: auto;
     cursor: pointer;
     padding: 0;
     margin: 0.5vw;
-    font-size: 0.8vw;
+    font-size: 1vw;
+    user-select: none;
+}
+main{
+    flex-grow: 1;
+}
+#homepage{
+    width: 400px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 10vw;
+    user-select: none;
+}
+
+.animals{
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 500px;
+}
+.animal div{
+    width: 150px;
+    height: 150px;
+}
+.home_cat{
+    background-image: url(imgs/cat.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.forest_cat{
+    background-image: url(imgs/mets_cat.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.reed_cat{
+    background-image: url(imgs/kamos.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.german_shepherd{
+    background-image: url(imgs/ovharka.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.labrador{
+    background-image: url(imgs/labrador.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bulldog{
+    background-image: url(imgs/buldog.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.ara{
+    background-image: url(imgs/ara.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.cockatoo{
+    background-image: url(imgs/kakadu.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.lovebirds{
+    background-image: url(imgs/nerasluchnik.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#description{
+    margin-left: 10vw;
+}
+#animal_img{
+    width: 170px;
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+}
+#animal_des{
+    max-width: 50vw;
 }
