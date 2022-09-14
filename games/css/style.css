@@ -1,0 +1,21 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: rgb(22, 22, 22);
+}
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#home span{
+    margin: 0px 0.3vw;
+    font-weight: bold;
+    font-size: 50px;
+}
+.neon{
+    box-shadow: -1px -2px 7px 1px #8E5CFF,-1px 1px 5px 3px #FF616B,2px 1px 5px 3px #E488FF,2px -1px 5px 2px #80C7FF,-3px -2px 5px 2px #8CFF85,-4px 2px 5px 2px #FFE488,2px 2px 5px 2px #FF8080;
+}
