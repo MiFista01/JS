@@ -1,0 +1,82 @@
+$(document).ready(function () {
+    // Изготовление верхушки
+    var text = $("#home").html()
+    var count = 0;
+    var array = ''
+    $("#home").html("");
+    for (let i of text){
+        var span = document.createElement("span");
+        span.textContent = i;
+        span.style.textShadow = "0px 0px 3px white, 0px 0px 3px white, 0px 0px 3px white, 0px 0px 3px white"+",0px 0px 15px " + colors[count%colors.length]+", 0px 0px 15px " + colors[count%colors.length]+", 0px 0px 15px " + colors[count%colors.length];
+        span.style.color = colors[count%colors.length]
+        count += 1;
+        document.getElementById("home").appendChild(span);
+    }
+    // Изготовление верхушки
+
+    // Изготовление асайда
+    count = 0
+    let unq_kinds = []
+    for (i of games){
+        for (j of i.genres){
+            if(!unq_kinds.includes(j)){
+                unq_kinds.push(j);
+                var li = document.createElement("li");
+                var text = document.createElement("p");
+                text.textContent = j;
+                text.id = j.replace(" ","_");
+                text.style.color = colors[count%colors.length];
+                text.style.textShadow = "0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white"+",0px 0px 5px " + colors[count%colors.length]+", 0px 0px 5px " + colors[count%colors.length]+", 0px 0px 5px " + colors[count%colors.length];
+                li.appendChild(text);
+                document.getElementById("aside_content").appendChild(li);
+                count++;
+            }
+        }
+    }
+    // Изготовление асайда
+
+    // Проверка клика и её реакция
+    var old_array = []
+    for (i of unq_kinds){
+        $("#"+i.replace(" ","_")).click(function (e) {
+            let new_array = games.filter(a => a.genres.includes(e.target.id.replace("_"," ")));
+            if(JSON.stringify(old_array) !== JSON.stringify(new_array)){
+                $(".games_scroll").empty();
+                old_array = new_array
+                let count = 0
+                for (j of old_array){
+                    let game = document.createElement("div")
+                        game.id = count
+                        game.className = "game"
+                        game.style.margin = "0"
+                        let img = document.createElement("div")
+                        img.style.width = "25vw"
+                        img.style.height = "35vw"
+                        img.style.backgroundImage = "url(imgs/"+q.poster+")"
+                        img.style.backgroundSize = "cover"
+                        img.style.backgroundPosition = "center"
+                        img.style.cursor = "pointer"
+                        img.style.boxShadow = "0px 0px 10px 10px rgb(12, 12, 12), inset 0px 0px 10px 10px rgb(12, 12, 12)"
+                        game.appendChild(img)
+                        let header = document.createElement("h2")
+                        header.textContent = q.name
+                        header.style.color = "white"
+                        header.style.textAlign = "center"
+                        game.appendChild(header)
+                        let text = document.createElement("p")
+                        text.textContent = "Подробнее..."
+                        text.style.color = "white"
+                        text.style.textAlign = "center"
+                        text.style.cursor = "pointer"
+                        text.id = q.anchor
+                        game.appendChild(text)
+                        document.getElementById("games_scroll").appendChild(game)
+                }
+            }
+        });
+    }
+    // Проверка клика и её реакция
+
+});
+/* 
+. */

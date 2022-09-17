@@ -6,6 +6,7 @@
     <title>Games</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel="stylesheet" href="js/lightbox/css/lightbox.css">
     <script src='js/jquery-3.6.1.min.js'></script>
     <script src='js/massiv.js'></script>
     <script src='js/scripts.js'></script>
@@ -27,10 +28,36 @@
                 <p>Здесь собраны те игры с которыми мне нравится убивать время. Эти игры не стыдно кому-то рекоменлдовать</p>
                 <img src="imgs/home_page.JPG" alt="">
             </div>
+            <div class="games">
+                <img src="imgs/arrow_left.svg" alt="" id="left">
+                <div class="games_scroll" id="scroll"></div>
+                <img src="imgs/arrow_right.svg" alt="" id="right">
+            </div>
+            <div class="description">
+                <a href="" id="link" data-title="game"  data-lightbox="image"><div class="des_img"></div></a>
+                <div class="des_text">
+                    <h2 id="des_header"></h2>
+                    <h3 id="des_def"></h3>
+                    <h3 id="des_geners"></h3>
+                    <p id="des"></p>
+                    <p id="des_back">Назад</p>
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
-        <p>Создатель вырвиглазного сайта: Алексей Козлов</p>
+    <footer id="footer">
+        <div class="all_games">
+            <img src="imgs/arrow_left.svg" alt="" id="all_games_left">
+            <div class="scroll_all_games">
+                <div class="block_scroll" id="block_scroll"></div>
+            </div>
+            <img src="imgs/arrow_right.svg" alt="" id="all_games_right">
+        </div>
+        <div class="text">
+            <p>Создатель вырвиглазного сайта: Алексей Козлов</p>
+            <p>Группа: JPTV20</p>
+        </div>
     </footer>
+    <script src="js/lightbox/lightbox.js"></script>
 </body>
 </html>
